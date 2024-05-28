@@ -5,10 +5,10 @@ import Button from '../../ui/Button';
 import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 import { clearCart, getCart } from './cartSlice';
-import { getUsername } from '../user/userSlice';
+import { getUser } from '../user/userSlice';
 
 function Cart() {
-  const username = useSelector(getUsername);
+  const { username } = useSelector(getUser);
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
 
